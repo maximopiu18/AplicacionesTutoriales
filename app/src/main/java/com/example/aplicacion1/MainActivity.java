@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         tvNombre = findViewById(R.id.main_activity_tv_nombre);
         btnEnviar = findViewById(R.id.main_activity_btn_abrir_ventana);
 
-        tvNombre.setText("El Jhonas");
+        tvNombre.setText("Develop");
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
