@@ -3,6 +3,7 @@ package com.example.aplicacion1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,65 +12,39 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity{
+    TextView tvNombre;
+    Button btnEnviar;
 
-
-
-    Operaciones operaciones;
-    Button btn1;
-    ImageView imgBack;
-    TextView tvTittle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadInstances();
-        loadUI();
-        loadListeners();
 
+        tvNombre = findViewById(R.id.main_activity_tv_nombre);
+        btnEnviar = findViewById(R.id.main_activity_btn_abrir_ventana);
 
-    }
-
-    private void loadInstances(){
-
-        operaciones = new Operaciones();
-        Utilerias utilerias = new Utilerias();
-        utilerias.getName();
-    }
-
-    private void loadUI(){
-        btn1 = findViewById(R.id.main_activity_btn_1);
-        imgBack = findViewById(R.id.btn_back);
-        tvTittle = findViewById(R.id.tv_title_header);
-
-        tvTittle.setText("Pantalla Principal");
-
-    }
-    private void loadListeners(){
-        Context context = MainActivity.this;
-        btn1.setOnClickListener(new View.OnClickListener() {
-
+        tvNombre.setText("El Jhonas");
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "bienvenido", Toast.LENGTH_SHORT).show();
-            }
-        });
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "Quieres salir de la app ? ", Toast.LENGTH_SHORT).show();
+                abrirVentanaMenu();
+
             }
         });
     }
 
-    public void message(){
+    public void abrirVentanaMenu() {
+        Intent intent = new Intent(this, ActivityMenu.class);
+
+        intent.putExtra("nombre",tvNombre.getText().toString());
+        startActivity(intent);
+
+
 
     }
-
-
-
 
 
 }

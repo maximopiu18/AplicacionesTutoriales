@@ -5,113 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanco"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <TextView
+        android:textSize="20dp"
+        android:text="Inserta tu nombre"
+        android:id="@+id/main_activity_tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-        <include layout="@layout/layout_header" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:orientation="vertical"
-        android:weightSum="100">
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="20"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <Button
-                android:id="@+id/main_activity_btn_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="1"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/main_activity_btn_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="2"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/main_activity_btn_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="3"
-                android:textSize="@dimen/texto16" />
-
-            <Button
-                android:id="@+id/main_activity_btn_mas"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="+"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="20"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <Button
-                android:id="@+id/main_activity_btn_4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="4"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/main_activity_btn_5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="5"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/main_activity_btn_6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="6"
-                android:textSize="@dimen/texto16" />
-
-            <Button
-                android:id="@+id/main_activity_btn_menos"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="@color/red"
-                android:text="-"
-                android:textSize="18dp" />
-        </LinearLayout>
-    </LinearLayout>
-
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/main_activity_btn_abrir_ventana"
+        android:text="Enviar dato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
